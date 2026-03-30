@@ -24,6 +24,7 @@ const getQuote = async () =>{
     let content = await response.json()
     let data = JSON.parse(content.contents);
     console.log(data);
+    
     let qn = Math.floor(Math.random() * data.length);
 
     quote.innerText = `${data[qn].text}`;
