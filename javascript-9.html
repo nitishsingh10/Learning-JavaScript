@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="container-fluid" style="width: fit-content;">
+
+        <fieldset>
+            <legend>Payment details</legend>
+
+            <dt>Card Number</dt>
+            <dd>
+                <input type="number" autofocus id="cardno">
+            </dd>
+
+            <div style="display: none;" id="options">
+
+                            <dt>CVV</dt>
+                            <dd>
+                                <input type="text" disabled id="cvv"> 
+                            </dd>
+                            <dt>Expiry</dt>
+                            <dd>
+                                <select name="options" id="select" disabled>
+                                    <option value="" disabled selected hidden>Expiry year</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                            </dd>
+                
+                            <button id="btn" disabled>Pay</button>
+            </div>
+        </fieldset>
+
+    </div>
+    <script src="js9.js"></script>
+</body>
+</html>
