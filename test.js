@@ -1,11 +1,19 @@
-function findVowels(str) {
-  const vowelList = "aeiouAEIOU";
-  let count = 0;
+function func1(test){
+
+  console.log("This is func 1");
   
-  for (let char of str) {
-    if (vowelList.includes(char)) {
-      count++;
-    }
-  }
-  return count;
+  let x = 20;
+
+  test();
+
 }
+
+
+let z = function(){
+  console.log("This is func2");
+  let y = 30;
+  console.log(x);
+  
+}
+
+func1(z);

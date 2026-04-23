@@ -122,16 +122,16 @@
 
 // })
 
-let email = document.getElementById("emailid");
-let btns = document.getElementById("btn-s");
+// let email = document.getElementById("emailid");
+// let btns = document.getElementById("btn-s");
 
-btns.addEventListener('click',()=>{
+// btns.addEventListener('click',()=>{
     
-    if(email.value.endsWith("@gmail.com")){
+//     if(email.value.endsWith("@gmail.com")){
         
         
 
 
-    }
+//     }
 
-})
+// })
