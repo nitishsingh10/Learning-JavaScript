@@ -1,19 +1,20 @@
-function func1(test){
+let arr = [2,4,6,8,10];
 
-  console.log("This is func 1");
-  
-  let x = 20;
+let arr2 = arr.map((e)=>{
 
-  test();
+    e = e + 5;
+    return e*2;
 
+}).filter((e)=>{
+    return e>15;
+});
+
+let arr3 = arr2.forEach((e)=>{
+    plus(e);
+});
+
+function plus(e){
+    console.log(e+100);
 }
 
 
-let z = function(){
-  console.log("This is func2");
-  let y = 30;
-  console.log(x);
-  
-}
-
-func1(z);
