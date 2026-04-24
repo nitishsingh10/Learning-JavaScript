@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+            width: 240px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h3>Check for Prime</h3>
+
+        <div class="inner">
+            <input type="number" id="input">
+            <button id="btn">Check</button>
+
+            <h4 id="output">Enter the number</h4>
+        </div>
+    </div>
+
+    <script>
+
+        function isPrime(n){
+
+            if(n < 2){
+                return false;
+            }
+            
+            for(let i = 2 ; i*i <= n ; ++i){
+                
+                if(n%i==0){
+                    return false;
+                }
+
+            }
+
+            return true;
+
+        }
+
+        let input = document.querySelector("#input");
+        let btn = document.querySelector("#btn");
+        
+        btn.addEventListener('click',()=>{
+
+            let num = input.value;
+
+            if(num == ''){
+                document.querySelector("#output").style.color='red';
+                return;
+            }
+
+            if(isPrime(num)){
+                document.querySelector("#output").style.color='green';
+                document.querySelector("#output").innerText = `Yes, a prime`
+
+            }
+            else{
+                document.querySelector("#output").style.color='red';
+                document.querySelector("#output").innerText = `Not a prime`
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

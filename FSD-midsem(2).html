@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            margin: 12px;
+            padding: 22px;
+            border: 1px solid black;
+            width: 240px;
+            text-align: center; 
+        }
+        button{
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h3>Toggle Paragraph Example</h3>
+
+        <button id="btn">
+            Toggle
+        </button>
+
+        <p id="pgp">This is a sample paragraph, click toggle to hide/view me</p>
+    </div>
+    
+    <script>
+
+        let btn = document.getElementById("btn");
+        let p = document.getElementById("pgp");
+
+        btn.addEventListener('click',()=>{
+            p.classList.toggle("hidden");
+        })
+
+    </script>
+</body>
+</html>
