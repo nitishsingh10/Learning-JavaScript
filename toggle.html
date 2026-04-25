@@ -1,34 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        button{
-            padding: 10px;
-            margin: 10px;
-        }
+      button {
+        padding: 10px;
+        margin: 10px;
+      }
 
-        .black{
-            background-color: black;
-        }
+      .black {
+        background-color: black;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <button>Toggle</button>
 
-    <button>
-        Toggle
-    </button>
-    
     <script>
-        let btn = document.querySelector("button");
+      let btn = document.querySelector('button')
 
-        btn.addEventListener('click',()=>{
-
-            document.querySelector("body").classList.toggle('black');
-        })
+      btn.addEventListener('click', () => {
+        document.querySelector('body').classList.toggle('black')
+      })
     </script>
-</body>
+  </body>
 </html>

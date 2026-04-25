@@ -1,53 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
+
     <style>
-        .container{
-            margin: 20px;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid black;
-            width: 240px;
-        }
+      .container {
+        margin: 20px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid black;
+        width: 240px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <h3>Vowel Counter</h3>
+      <h3>Vowel Counter</h3>
 
-        <div class="inner">
-            <input type="text" id="input">
-            <button id="btn">Count</button>
+      <div class="inner">
+        <input type="text" id="input" />
+        <button id="btn">Count</button>
 
-            <h4 id="output">Enter the String</h4>
-        </div>
+        <h4 id="output">Enter the String</h4>
+      </div>
     </div>
-    
 
     <script>
-        let input = document.querySelector("#input");
-        let btn = document.querySelector("#btn");
-        
-        btn.addEventListener('click',()=>{
-            let inputValue = input.value
-                                    .trim(); 
-            
-            let count = inputValue.match(/[aeiou]/gi);
+      let input = document.querySelector('#input')
+      let btn = document.querySelector('#btn')
 
-            if(count == null){
-                document.querySelector("#output").style.color='red';
-                return;
-            }else{
+      btn.addEventListener('click', () => {
+        let inputValue = input.value.trim()
 
-                document.querySelector("#output").innerText = `The count is : ${count.length}`;
-            }
-        })
+        let count = inputValue.match(/[aeiou]/gi)
 
+        if (count == null) {
+          document.querySelector('#output').style.color = 'red'
+          return
+        } else {
+          document.querySelector('#output').innerText =
+            `The count is : ${count.length}`
+        }
+      })
     </script>
-</body>
+  </body>
 </html>

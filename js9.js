@@ -1,45 +1,31 @@
-let card = document.getElementById("cardno");
-let div = document.getElementById("options")
+let card = document.getElementById('cardno');
+let div = document.getElementById('options');
 
-card.addEventListener('blur',()=>{
+card.addEventListener('blur', () => {
+  let input = card.value.startsWith('442255');
+  let cvv = document.getElementById('cvv');
 
-    let input = card.value.startsWith("442255");
-    let cvv = document.getElementById("cvv");
-    
+  if (input) {
+    div.style.display = 'block';
+    cvv.disabled = false;
+    cvv.focus();
+  } else {
+    alert('Invalid card number');
+  }
 
-    if(input){
+  cvv.addEventListener('blur', () => {
+    let select = document.getElementById('select');
 
-        div.style.display="block";
-        cvv.disabled=false;
-        cvv.focus();
+    if (cvv.value.length == 3) {
+      select.disabled = false;
+    } else {
+      alert('Invalid cvv');
     }
-    else{
-        alert("Invalid card number");
-    }
 
-    cvv.addEventListener('blur',()=>{
+    select.addEventListener('change', () => {
+      let pay = document.getElementById('btn');
 
-        let select = document.getElementById("select");
-
-        if(cvv.value.length == 3 ){
-
-            select.disabled = false;
-
-        }
-        else{
-            alert("Invalid cvv");
-        }
-
-        select.addEventListener('change',()=>{
-
-            let pay = document.getElementById('btn');
-
-            pay.disabled=false;
-
-        })
-
-
-
-    })
-
-})
+      pay.disabled = false;
+    });
+  });
+});
