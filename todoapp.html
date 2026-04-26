@@ -4,6 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid black;
+        width: fit-content;
+      }
+      button{
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(150, 135, 135);
+      }
+
+      button:active{
+        box-shadow: inset 1px 1px 1px 1px rgb(150, 135, 135);
+
+      }
+      input{
+        padding: 8px;
+      }
+      .btn{
+        background-color: red;
+        color:white;
+        padding: 5px 10px 5px 10px;
+      }
+
+      .task-field{
+        display: flex;
+        justify-content: space-around;
+        margin-right:10px;
+        margin: 10px 10px 10px 0px;
+      }
+
+
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h2>Todo App</h2>
+      <input type="text" placeholder="Enter the task" id="input">
+      <button id="submit">Add Task</button>
+      <p id="msg"></p>
+      <ul id="tasks">
+
+      </ul>
+    </div>
+    <script>
+
+      let input = document.getElementById("input");
+      let btn = document.getElementById("submit");
+      let ul = document.getElementById("tasks");
+
+      btn.addEventListener("click",()=>{
+
+        let t = input.value;
+        let task = document.createElement("li");
+        task.innerHTML = `<div class = "task-field"><p>${t}</p> <button class="btn" id="del">Delete</button></div>`;
+        ul.append(task);
+
+        
+
+      });
+    </script>
+  </body>
 </html>

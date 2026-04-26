@@ -135,3 +135,46 @@
 //     }
 
 // })
+
+// let a;
+// console.log(a);
+// let x = 10;
+
+// function update(){
+
+//     let x = 20;
+//     inc();
+
+// }
+
+// function inc(){
+//     x++;
+// }
+
+// update();
+// console.log(x);
+
+// let x = 1;
+
+// function outer()
+// {
+//     function inner()
+//     {
+//         x = 20;
+//         console.log(x);
+//     }
+
+//     function shadow()
+//     {
+//         let x = 2;
+//         console.log(x);
+//         function inner()
+//         {
+//             x = 4;
+//             console.log(x);
+//         }
+//         inner();
+//     }
+//     shadow();
+// }
+// outer();
