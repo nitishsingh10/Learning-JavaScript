@@ -1,11 +1,32 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    
-  </body>
+<html>
+    <head> </head>
+    <body>
+        <script>
+            let ul = document.createElement('ul')
+            document.body.appendChild(ul)
+
+            let inp = document.createElement('input')
+            inp.placeholder = 'Subject name'
+            inp.required = true
+            document.body.appendChild(inp)
+
+            let submit = document.createElement('button')
+            submit.style.color = 'red'
+            submit.innerText = 'SUBMIT'
+            document.body.appendChild(submit)
+
+            function del() {
+                li.remove()
+            }
+
+            submit.addEventListener('click', function (e) {
+                li = document.createElement('li')
+                li.innerHTML = `${inp.value}&nbsp;&nbsp; <button onClick='del()' id = "btn">Delete</button>`
+                ul.appendChild(li)
+
+                inp.value = ''
+                console.log('Success')
+            })
+        </script>
+    </body>
 </html>

@@ -11,19 +11,20 @@
         margin: 10px;
       }
 
-      /* .black {
+      .black {
         background-color: black;
-      } */
+      }
     </style>
   </head>
   <body>
     <button id="btn">Toggle</button>
 
     <script>
-      let bttn = document.getElementById("btn")
+
+      console.log(btn)
 
       btn.addEventListener('click', function() {
-        document.querySelector('body').style.backgroundColor="black";
+        document.querySelector('body').classList.toggle("black")
       })
     </script>
   </body>
