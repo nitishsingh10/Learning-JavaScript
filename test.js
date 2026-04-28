@@ -30,11 +30,11 @@
 
 // find
 
-let users = [{id:121, name : "Nitish", class:"B1", age:17},{id:125, name : "Krishna", class:"B1", age:20},{id:46, name : "Dhruv", class:"B1", age:20}];
+// let users = [{id:121, name : "Nitish", class:"B1", age:17},{id:125, name : "Krishna", class:"B1", age:20},{id:46, name : "Dhruv", class:"B1", age:20}];
 
 
-let arr2 = users.find((e)=>{
-    return e.id == 126;
-});
+// let arr2 = users.find((e)=>{
+//     return e.id == 126;
+// });
 
-console.log(arr2 || "not found");
+// console.log(arr2 || "not found");
